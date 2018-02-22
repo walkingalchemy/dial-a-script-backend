@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  digits: 1
+  status: false
+  office: one
+
+two:
+  digits: 1
+  status: false
+  office: two
