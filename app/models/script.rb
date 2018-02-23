@@ -5,4 +5,8 @@ class Script < ApplicationRecord
   has_many :phones, through: :phone_scripts
   has_many :offices, through: :phones
   has_many :organizations, through: :phones
+
+  validates :body, :description, :title, :user, presence: true
+  validates :title, uniqueness: true
+
 end
