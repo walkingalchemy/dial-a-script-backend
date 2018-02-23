@@ -8,6 +8,8 @@ Bundler.require(*Rails.groups)
 
 module DialAScript
   class Application < Rails::Application
+    # Set project to use API configuration
+    config.api_only = true
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
 

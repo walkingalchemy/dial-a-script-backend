@@ -42,6 +42,9 @@ Rails.application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  # Configure the format used in responses when errors occur :default => HTML
+  config.debug_exception_response_format = :default
+
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
