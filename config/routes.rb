@@ -7,6 +7,7 @@ Rails.application.routes.draw do
         resources :calls, only: [:index, :show, :create]
       end
       resources :scripts, only: [:index, :show, :create, :update, :destroy]
+      resources :phones, only: [:index, :show, :create, :update]
 
     end
   end
