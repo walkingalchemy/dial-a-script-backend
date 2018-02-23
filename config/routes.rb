@@ -8,6 +8,10 @@ Rails.application.routes.draw do
       end
       resources :scripts, only: [:index, :show, :create, :update, :destroy]
       resources :phones, only: [:index, :show, :create, :update]
+      resources :organizations, only: [:index, :show, :create, :update]
+      resources :organizations do
+        resources :offices, only: [:index, :show, :create, :update]
+      end
 
     end
   end
