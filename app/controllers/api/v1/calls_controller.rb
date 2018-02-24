@@ -11,7 +11,13 @@ class Api::V1::CallsController < ApplicationController
   end
 
   def create
+    @call = Call.new(params)
 
+    if @call.save
+      render json: @call
+    else
+      render json: {errors: @call.errors.full_messages}, status: 422
+    end
   end
 
 
