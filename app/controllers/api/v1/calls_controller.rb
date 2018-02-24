@@ -1,7 +1,7 @@
 class Api::V1::CallsController < ApplicationController
 
   def index
-    @calls = Call.all
+    @calls = Call.all.select {|call| call.user_id == params[:user_id].to_i}
     render json: @calls
   end
 
