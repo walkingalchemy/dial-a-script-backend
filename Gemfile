@@ -33,6 +33,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 # Use JWT token management for encoding
 gem 'jwt'
+# Use JSON for parsing objects into json
+gem 'json'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development

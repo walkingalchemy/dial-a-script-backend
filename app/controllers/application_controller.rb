@@ -3,7 +3,6 @@ class ApplicationController < ActionController::API
   before_action :authorized
 
   def encode_token(payload)
-    byebug
     JWT.encode(payload, "binding.cry", "HS256")
   end
 
@@ -13,9 +12,10 @@ class ApplicationController < ActionController::API
 
   def decoded_token
     if auth_header
-        token = auth_header.split(" ")[1] #header: {'Authorization': 'Bearer JWTTOKEN'}
+        token = auth_header #header: {'Authorization': 'Bearer JWTTOKEN'}
         begin
           JWT.decode(token, "binding.cry", true, { algorithm: "HS256" })
+          byebug
         rescue JWT::DecodeError
           [{}]
         end

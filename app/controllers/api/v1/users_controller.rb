@@ -8,12 +8,13 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(params)
-    if @user.vaild?
+    @user = User.new(user_params)
+    if @user.valid?
       @user.save
       @user.authenticate(user_params[:password])
       token = encode_token({ user_id: @user.id })
-      render json: { name: @user.name, jwt: token }, status: 202
+      obj = { name: @user.name, jwt: token }
+      render json: obj.to_json, status: 202
     else
       render json: { message: "Invalid name or password" }, status: 401
     end
