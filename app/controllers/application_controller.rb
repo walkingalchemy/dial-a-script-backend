@@ -15,7 +15,6 @@ class ApplicationController < ActionController::API
         token = auth_header #header: {'Authorization': 'Bearer JWTTOKEN'}
         begin
           JWT.decode(token, "binding.cry", true, { algorithm: "HS256" })
-          byebug
         rescue JWT::DecodeError
           [{}]
         end
