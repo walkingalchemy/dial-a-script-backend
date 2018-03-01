@@ -22,7 +22,6 @@ class Api::V1::ScriptsController < ApplicationController
 
     @script = Script.new(script_params)
     @script.user = current_user
-    byebug
     if @script.valid?
       @script.save
       @script.phones << @phone
