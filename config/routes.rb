@@ -5,9 +5,7 @@ Rails.application.routes.draw do
       resources :users, only: [:show, :update]
       post '/signup', to: 'users#create'
       post '/login', to: 'auth#create'
-      resources :users do
-        resources :calls, only: [:index, :show, :create]
-      end
+      resources :calls, only: [:index, :show, :create]
       resources :scripts, only: [:index, :show, :create, :update, :destroy]
       resources :phones, only: [:index, :show, :create, :update]
       resources :organizations, only: [:index, :show, :create, :update]

@@ -26,6 +26,11 @@ class Api::V1::ScriptsController < ApplicationController
       @script.save
       @script.phones << @phone
       render json: @script
+      # render json: {script: @script, phones: [@phone]}
+      
+      # ActiveModelSerializers::Adapter::Json.new(
+      #     TileSerializer.new(tile)
+      #     ).serializable_hash
     else
       render json: {error: "failed to create script"}.to_json
     end

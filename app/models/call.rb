@@ -5,7 +5,7 @@ class Call < ApplicationRecord
   has_one :office, through: :phone
   has_one :organization, through: :phone
 
-  validates :duration, :user, :phone, presence: true
+  validates :duration, :user, :phone, :script, presence: true
 
 
 end
