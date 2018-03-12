@@ -36,13 +36,41 @@ In either case, from there you should install the [Dial-A-Script-Frontend](https
 ## Api V1 Reference
 
 ```
-api_v1_chat_sessions GET    /api/v1/chat_sessions(.:format)     api/v1/chat_sessions#index
-                     POST   /api/v1/chat_sessions(.:format)     api/v1/chat_sessions#create
- api_v1_chat_session GET    /api/v1/chat_sessions/:id(.:format) api/v1/chat_sessions#show
-                     DELETE /api/v1/chat_sessions/:id(.:format) api/v1/chat_sessions#destroy
-        api_v1_users GET    /api/v1/users(.:format)             api/v1/users#index
-                     POST   /api/v1/users(.:format)             api/v1/users#create
-  api_v1_transcripts POST   /api/v1/transcripts(.:format)       api/v1/transcripts#create
+                api_v1_user GET    /api/v1/users/:id(.:format)                                  api/v1/users#show
+                            PATCH  /api/v1/users/:id(.:format)                                  api/v1/users#update
+                            PUT    /api/v1/users/:id(.:format)                                  api/v1/users#update
+              api_v1_signup POST   /api/v1/signup(.:format)                                     api/v1/users#create
+               api_v1_login POST   /api/v1/login(.:format)                                      api/v1/auth#create
+               api_v1_calls GET    /api/v1/calls(.:format)                                      api/v1/calls#index
+                            POST   /api/v1/calls(.:format)                                      api/v1/calls#create
+                api_v1_call GET    /api/v1/calls/:id(.:format)                                  api/v1/calls#show
+             api_v1_scripts GET    /api/v1/scripts(.:format)                                    api/v1/scripts#index
+                            POST   /api/v1/scripts(.:format)                                    api/v1/scripts#create
+              api_v1_script GET    /api/v1/scripts/:id(.:format)                                api/v1/scripts#show
+                            PATCH  /api/v1/scripts/:id(.:format)                                api/v1/scripts#update
+                            PUT    /api/v1/scripts/:id(.:format)                                api/v1/scripts#update
+                            DELETE /api/v1/scripts/:id(.:format)                                api/v1/scripts#destroy
+              api_v1_phones GET    /api/v1/phones(.:format)                                     api/v1/phones#index
+                            POST   /api/v1/phones(.:format)                                     api/v1/phones#create
+               api_v1_phone GET    /api/v1/phones/:id(.:format)                                 api/v1/phones#show
+                            PATCH  /api/v1/phones/:id(.:format)                                 api/v1/phones#update
+                            PUT    /api/v1/phones/:id(.:format)                                 api/v1/phones#update
+       api_v1_organizations GET    /api/v1/organizations(.:format)                              api/v1/organizations#index
+                            POST   /api/v1/organizations(.:format)                              api/v1/organizations#create
+        api_v1_organization GET    /api/v1/organizations/:id(.:format)                          api/v1/organizations#show
+                            PATCH  /api/v1/organizations/:id(.:format)                          api/v1/organizations#update
+                            PUT    /api/v1/organizations/:id(.:format)                          api/v1/organizations#update
+api_v1_organization_offices GET    /api/v1/organizations/:organization_id/offices(.:format)     api/v1/offices#index
+                            POST   /api/v1/organizations/:organization_id/offices(.:format)     api/v1/offices#create
+ api_v1_organization_office GET    /api/v1/organizations/:organization_id/offices/:id(.:format) api/v1/offices#show
+                            PATCH  /api/v1/organizations/:organization_id/offices/:id(.:format) api/v1/offices#update
+                            PUT    /api/v1/organizations/:organization_id/offices/:id(.:format) api/v1/offices#update
+                            GET    /api/v1/organizations(.:format)                              api/v1/organizations#index
+                            POST   /api/v1/organizations(.:format)                              api/v1/organizations#create
+                            GET    /api/v1/organizations/:id(.:format)                          api/v1/organizations#show
+                            PATCH  /api/v1/organizations/:id(.:format)                          api/v1/organizations#update
+                            PUT    /api/v1/organizations/:id(.:format)                          api/v1/organizations#update
+                            DELETE /api/v1/organizations/:id(.:format)                          api/v1/organizations#destroy
 ```
 
 ## Licensing
