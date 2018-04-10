@@ -5,6 +5,10 @@
 
 Dial-A-Script is a web based tool for writing, calling and sharing call scripts.  This is the repository for the Ruby on Rails based JSON API.  The frontend client repository resides at: [Dial-A-Script-Frontend](https://github.com/walkingalchemy/Dial-A-Script-Frontend)
 
+## Demo
+<a href="https://youtu.be/YZtywGdIUe0" target="_blank"><img src="http://img.youtube.com/vi/YZtywGdIUe0/0.jpg" 
+alt="Janx Thumbnail" width="240" height="180" border="10" /></a>
+
 ## Installing / Getting started
 
 This project uses [Rails 5.1.4](http://weblog.rubyonrails.org/2017/8/24/Rails-5-1-4-rc1-and-5-0-6-rc1-released/).  It also uses the [Postgres](https://www.postgresql.org/) database. Go check them out if you don't have them locally installed. 
